@@ -7,7 +7,6 @@
     <title>RezzyPrep - AI Powered Interview Prep</title>
     <link rel="stylesheet" href="css/styles.css">
     <script src="https://cdn.botpress.cloud/webchat/v3.0/inject.js"></script>
-    <div id="webchat" style="width: 500px; height: 500px;"></div>
     <style>
       html, body {
         height: 100%;
@@ -56,6 +55,9 @@
             </ul>
         </nav>
     </header>
+    <main>
+        <div id="webchat" style="width: 100%; max-width: 500px; height: 600px; margin: 0 auto;"></div>
+    </main>
     <footer class="footer">
         <p>&copy; 2025 RezzyPrep. All rights reserved.</p>
     </footer>
@@ -63,7 +65,6 @@
       window.botpress.on("webchat:ready", () => {
         window.botpress.open();
       });
-       
       window.botpress.init({
         "botId": "49165123-5810-4ed6-8326-a302859ce537",
         "configuration": {
