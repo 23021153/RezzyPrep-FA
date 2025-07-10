@@ -62,26 +62,24 @@
         <p>&copy; 2025 RezzyPrep. All rights reserved.</p>
     </footer>
     <script>
-      window.botpress.init({
-  "botId": "49165123-5810-4ed6-8326-a302859ce537",
-  "configuration": {
-    "version": "v1",
-    "website": {},
-    "email": {},
-    "phone": {},
-    "termsOfService": {},
-    "privacyPolicy": {},
-    "color": "#3276EA",
-    "variant": "solid",
-    "headerVariant": "glass",
-    "themeMode": "light",
-    "fontFamily": "inter",
-    "radius": 4,
-    "feedbackEnabled": false,
-    "footer": "[âš¡ by Botpress](https://botpress.com/?from=webchat)"
-  },
-  "clientId": "896515a3-b530-4f8c-a516-c1c5062c6242"
-});
+      window.botpressWebChat.init({
+        "botId": "49165123-5810-4ed6-8326-a302859ce537",
+        "clientId": "896515a3-b530-4f8c-a516-c1c5062c6242",
+        "hostUrl": "https://cdn.botpress.cloud/webchat/v3",
+        "messagingUrl": "https://messaging.botpress.cloud",
+        "containerId": "webchat",
+        "hideWidget": true,
+        "showCloseButton": false,
+        "disableAnimations": false,
+        "themeName": "prism",
+        "theme": "prism",
+        "botName": "RezzyPrep Mock Interview Bot",
+        "avatarUrl": "https://botpress.com/static/avatars/botpress.png",
+        "stylesheet": '',
+        "frontendVersion": "v3",
+        "useSessionStorage": true,
+        "enableTranscriptDownload": false
+      });
     </script>
 </body>
 </html>
