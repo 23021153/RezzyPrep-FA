@@ -56,13 +56,14 @@
             </ul>
         </nav>
     </header>
-    <main>
-        <div id="webchat"></div>
-    </main>
     <footer class="footer">
         <p>&copy; 2025 RezzyPrep. All rights reserved.</p>
     </footer>
     <script>
+      window.botpress.on("webchat:ready", () => {
+        window.botpress.open();
+      });
+       
       window.botpress.init({
         "botId": "49165123-5810-4ed6-8326-a302859ce537",
         "configuration": {
