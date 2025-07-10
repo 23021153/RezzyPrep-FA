@@ -6,52 +6,37 @@
     <meta name="description" content="RezzyPrep - AI Mock Interview Bot">
     <title>RezzyPrep - Mock Interview</title>
     <link rel="stylesheet" href="css/styles.css">
-    <script src="https://cdn.botpress.cloud/webchat/v3.0/inject.js"></script>    
+    <script src="https://cdn.botpress.cloud/webchat/v3.0/inject.js"></script>
+    <script src="https://files.bpcontent.cloud/2025/07/10/08/20250710084007-N81HZK8A.js"></script>
+    
     <style>
-      #error {
-  font-size: 2rem;
-  display: none;
-  color: red;
-  font-weight: bold;
-  padding: 1rem;
-  border: 2px solid red;
-  width: 300px;
-  margin: 1rem 0;
-}
-
-#success {
-  font-size: 2rem;
-  display: none;
-  color: green;
-  font-weight: bold;
-  padding: 1rem;
-  border: 2px solid green;
-  width: 300px;
-  margin: 1rem 0;
-}
-
-.container {
-  display: flex;
-  flex-direction: row;
-  width: 100vw;
-  height: 100vh;
-}
-
-.right {
-  flex-grow: 1;
-}
-
-#webchat .bpWebchat {
-  position: unset;
-  width: 100%;
-  height: 100%;
-  max-height: 100%;
-  max-width: 100%;
-}
-
-#webchat .bpFab {
-  display: none;
-}
+      #webchat .bpWebchat {
+        position: unset;
+        width: 100%;
+        height: 100%;
+        max-height: 100%;
+        max-width: 100%;
+      }
+      #webchat .bpFab {
+        display: none;
+      }
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+      main {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 80vh;
+      }
     </style>
 </head>
 <body>
@@ -72,5 +57,31 @@
     <footer class="footer">
         <p>&copy; 2025 RezzyPrep. All rights reserved.</p>
     </footer>
+    <script>
+      window.botpress.on("webchat:ready", () => {
+        window.botpress.open();
+      });
+      window.botpress.init({
+        "botId": "49165123-5810-4ed6-8326-a302859ce537",
+        "configuration": {
+          "version": "v1",
+          "website": {},
+          "email": {},
+          "phone": {},
+          "termsOfService": {},
+          "privacyPolicy": {},
+          "color": "#3276EA",
+          "variant": "solid",
+          "headerVariant": "glass",
+          "themeMode": "light",
+          "fontFamily": "inter",
+          "radius": 4,
+          "feedbackEnabled": false,
+          "footer": "[⚡ by Botpress](https://botpress.com/?from=webchat)"
+        },
+        "clientId": "896515a3-b530-4f8c-a516-c1c5062c6242",
+        "selector": "#webchat"
+      });
+    </script>
 </body>
 </html>
