@@ -43,7 +43,7 @@
             <div class="logo">RezzyPrep</div>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="#" class="active">CV Analyzer</a></li>
+                <li><a href="cv-analyzer.html" class="active">CV Analyzer</a></li>
                 <li><a href="#">AI Powered Interview Prep</a></li>
                 <li><a href="#">Contact</a></li>
             </ul>
@@ -56,8 +56,7 @@
             <div class="chatflow-desc">
                 Upload your résumé and get instant, structured feedback from our AI career coach. Your data is private and never stored.
             </div>
-            <!-- Replace the src below with your actual Flowise deployment URL -->
-            <iframe class="chatflow-iframe" src="https://flowiseai.com/embed/your-cv-analyzer-chatflow" title="CV Analyzer AI"></iframe>
+            <div id="flowise-chatbot"></div>
         </div>
     </main>
 
@@ -66,5 +65,12 @@
     </footer>
 
     <script src="js/app.js"></script>
+    <script type="module">
+        import Chatbot from "https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js"
+        Chatbot.init({
+            chatflowid: "4754ee89-c88e-4b06-908e-d4df0dc313b7",
+            apiHost: "https://caitlynwee-flowise.hf.space",
+        })
+    </script>
 </body>
 </html>
