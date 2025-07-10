@@ -1,70 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="RezzyPrep - AI Mock Interview Bot">
-  <title>RezzyPrep - AI Powered Interview Prep</title>
-  <link rel="stylesheet" href="css/styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Botpress Webchat Integration</title>
+
+  <!-- Inject Botpress Webchat Script -->
+  <script src="https://cdn.botpress.cloud/webchat/v3.0/inject.js"></script>
+
+  <!-- Optional Custom Styling -->
   <style>
-    #webchat-container {
-      position: relative;
+    #webchat .bpWebchat {
+      position: unset;
       width: 100%;
-      height: 600px;
-      max-width: 500px;
-      margin: 6rem auto 3rem auto;
-      background: #fff;
-      border-radius: 12px;
-      box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+      height: 100%;
+      max-height: 100%;
+      max-width: 100%;
     }
-    .bpFab {
+
+    #webchat .bpFab {
       display: none;
-    }
-    .bpWebchat {
-      position: absolute !important;
-      top: 0 !important;
-      left: 0 !important;
-      right: 0 !important;
-      bottom: 0 !important;
-      width: 100% !important;
-      height: 100% !important;
     }
   </style>
 </head>
 <body>
-  <header class="header">
-    <nav class="nav">
-      <div class="logo">RezzyPrep</div>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="cv-analyzer.html">CV Analyzer</a></li>
-        <li><a href="mock-interview.html" class="active">Mock Interview</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
-  <main>
-    <div id="webchat-container">
-      <!-- Botpress webchat will be injected here -->
-    </div>
-  </main>
-  <footer class="footer">
-    <p>&copy; 2025 RezzyPrep. All rights reserved.</p>
-  </footer>
-  <script src="https://cdn.botpress.cloud/webchat/v3.0/inject.js"></script>
+
+  <!-- Bot container -->
+  <div id="webchat" style="width: 500px; height: 500px;"></div>
+
+  <!-- Botpress Config Script -->
   <script>
     window.botpress.on("webchat:ready", () => {
       window.botpress.open();
     });
+
     window.botpress.init({
-      "botId": "49165123-5810-4ed6-8326-a302859ce537",
+      "botId": "502c3310-636b-490a-8b95-d03604376869",
       "configuration": {
         "version": "v1",
-        "website": {},
-        "email": {},
-        "phone": {},
-        "termsOfService": {},
-        "privacyPolicy": {},
         "color": "#3276EA",
         "variant": "solid",
         "headerVariant": "glass",
@@ -74,9 +47,13 @@
         "feedbackEnabled": false,
         "footer": "[⚡ by Botpress](https://botpress.com/?from=webchat)"
       },
-      "clientId": "896515a3-b530-4f8c-a516-c1c5062c6242",
+      "clientId": "1eced4cf-0a70-4d09-b510-60519266b6c4",
       "selector": "#webchat"
     });
   </script>
+
+  <!-- Optional: This loads your custom config or skills -->
+  <script src="https://files.bpcontent.cloud/2025/07/10/17/20250710171152-JRRPWZMI.js"></script>
+
 </body>
 </html>
