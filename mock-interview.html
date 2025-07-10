@@ -7,7 +7,6 @@
     <title>RezzyPrep - AI Powered Interview Prep</title>
     <link rel="stylesheet" href="css/styles.css">
     <script src="https://cdn.botpress.cloud/webchat/v3.0/inject.js"></script>
-    <script src="https://files.bpcontent.cloud/2025/07/10/08/20250710084007-N81HZK8A.js"></script>
     <style>
       html, body {
         height: 100%;
@@ -57,36 +56,19 @@
         </nav>
     </header>
     <main>
-        <div id="webchat" style="width: 100%; max-width: 500px; height: 600px; margin: 0 auto;"></div>
+        <div id="webchat"></div>
     </main>
     <footer class="footer">
-        <p>&copy; 2025 RezzyPrep. All rights reserved.</p>
+        <p>© 2025 RezzyPrep. All rights reserved.</p>
     </footer>
     <script>
-      window.botpress.on("webchat:ready", () => {
-        window.botpress.open();
+      window.botpressWebChat.init({
+        botId: "49165123-5810-4ed6-8326-a302859ce537",
+        clientId: "896515a3-b530-4f8c-a516-c1c5062c6242",
+        container: "#webchat",
+        themeColor: "#3276EA"
       });
-      window.botpress.init({
-        "botId": "49165123-5810-4ed6-8326-a302859ce537",
-        "configuration": {
-          "version": "v1",
-          "website": {},
-          "email": {},
-          "phone": {},
-          "termsOfService": {},
-          "privacyPolicy": {},
-          "color": "#3276EA",
-          "variant": "solid",
-          "headerVariant": "glass",
-          "themeMode": "light",
-          "fontFamily": "inter",
-          "radius": 4,
-          "feedbackEnabled": false,
-          "footer": "[⚡ by Botpress](https://botpress.com/?from=webchat)"
-        },
-        "clientId": "896515a3-b530-4f8c-a516-c1c5062c6242",
-        "selector": "#webchat"
-      });
+      window.botpressWebChat.sendEvent({ type: 'show' });
     </script>
 </body>
 </html>
