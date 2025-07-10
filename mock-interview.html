@@ -6,7 +6,6 @@
     <meta name="description" content="RezzyPrep - AI Mock Interview Bot">
     <title>RezzyPrep - AI Powered Interview Prep</title>
     <link rel="stylesheet" href="css/styles.css">
-    <script src="https://cdn.botpress.cloud/webchat/v3.0/inject.js"></script>
     <style>
       #webchat .bpWebchat {
         position: unset;
@@ -56,37 +55,40 @@
         </nav>
     </header>
     <main>
-        <div id="webchat" style="width: 500px; height: 500px;"></div>
+        <div id="webchat"></div>
     </main>
     <footer class="footer">
         <p>&copy; 2025 RezzyPrep. All rights reserved.</p>
     </footer>
+    <script src="https://cdn.botpress.cloud/webchat/v3.0/inject.js"></script>
     <script>
-      window.botpress.on("webchat:ready", () => {
-        window.botpress.open();
-      });
-      window.botpress.init({
-        "botId": "eec0d254-8beb-406c-a56a-29705d7bfcdb",
-        "configuration": {
-          "version": "v1",
-          "botName": "RezzyPrep",
-          "botDescription": "I can help you prepare for interviews with expert guidance, sample questions and answers, and personalized tips for your career journey.",
-          "website": { "title": "", "link": "" },
-          "email": {},
-          "phone": {},
-          "termsOfService": {},
-          "privacyPolicy": {},
-          "color": "#2164F3",
-          "variant": "solid",
-          "headerVariant": "glass",
-          "themeMode": "light",
-          "fontFamily": "inter",
-          "radius": 2,
-          "feedbackEnabled": true,
-          "footer": "[⚡ by Botpress](https://botpress.com/?from=webchat)"
-        },
-        "clientId": "f9f8dc95-4ae6-4ad0-8417-011eb402d622",
-        "selector": "#webchat"
+      window.addEventListener('DOMContentLoaded', function() {
+        window.botpress.on("webchat:ready", () => {
+          window.botpress.open();
+        });
+        window.botpress.init({
+          "botId": "eec0d254-8beb-406c-a56a-29705d7bfcdb",
+          "configuration": {
+            "version": "v1",
+            "botName": "RezzyPrep",
+            "botDescription": "I can help you prepare for interviews with expert guidance, sample questions and answers, and personalized tips for your career journey.",
+            "website": { "title": "", "link": "" },
+            "email": {},
+            "phone": {},
+            "termsOfService": {},
+            "privacyPolicy": {},
+            "color": "#2164F3",
+            "variant": "solid",
+            "headerVariant": "glass",
+            "themeMode": "light",
+            "fontFamily": "inter",
+            "radius": 2,
+            "feedbackEnabled": true,
+            "footer": "[⚡ by Botpress](https://botpress.com/?from=webchat)"
+          },
+          "clientId": "f9f8dc95-4ae6-4ad0-8417-011eb402d622",
+          "selector": "#webchat"
+        });
       });
     </script>
 </body>
