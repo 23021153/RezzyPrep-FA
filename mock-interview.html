@@ -1,13 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="RezzyPrep - CV Analyzer & Smart CV Analysis">
-    <title>RezzyPrep - Mock Interview</title>
-    <script src="https://cdn.botpress.cloud/webchat/v3.0/inject.js"></script>
-    <link rel="stylesheet" href="css/styles.css">
-    <style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="RezzyPrep - CV Analyzer & Smart CV Analysis" />
+  <title>RezzyPrep - Mock Interview</title>
+
+  <!-- Botpress Script -->
+  <script src="https://cdn.botpress.cloud/webchat/v3.0/inject.js"></script>
+
+  <!-- Your Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css" />
+
+  <!-- Custom Centering and Resizing Styles -->
+  <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
@@ -24,6 +30,11 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
     }
 
     .nav-links {
@@ -52,10 +63,11 @@
       max-width: 90%;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
-    </style>
-
+  </style>
 </head>
 <body>
+
+  <!-- Header -->
   <header class="header">
     <nav class="nav">
       <div class="logo">RezzyPrep</div>
@@ -68,8 +80,10 @@
     </nav>
   </header>
 
-  <div id="webchat" style="width: 500px; height: 500px;"></div>
+  <!-- Bot Container -->
+  <div id="webchat"></div>
 
+  <!-- Botpress Configuration -->
   <script>
     window.botpress.on("webchat:ready", () => {
       window.botpress.open();
@@ -81,5 +95,6 @@
       selector: "#webchat"
     });
   </script>
+
 </body>
 </html>
