@@ -81,4 +81,21 @@ document.addEventListener('DOMContentLoaded', () => {
             ctaButton.style.transform = 'scale(1)';
         });
     }
+
+    // Make Smart CV Analysis card clickable
+    const cvCard = document.getElementById('cv-analysis-card');
+    if (cvCard) {
+        cvCard.addEventListener('click', () => {
+            window.location.href = 'cv-analyzer.html';
+        });
+        cvCard.addEventListener('mouseenter', () => {
+            cvCard.style.boxShadow = '0 0 0 4px #e67e22'; // fallback to actual color
+            cvCard.style.transform = 'translateY(-8px) scale(1.03)';
+            cvCard.style.transition = 'box-shadow 0.2s, transform 0.2s';
+        });
+        cvCard.addEventListener('mouseleave', () => {
+            cvCard.style.boxShadow = '';
+            cvCard.style.transform = '';
+        });
+    }
 });
