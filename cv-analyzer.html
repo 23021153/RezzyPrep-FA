@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV Analyzer</title>
+</head>
+<body>
+  <script type="module">
+    import Chatbot from "https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js"
+    Chatbot.init({
+      chatflowid: "4754ee89-c88e-4b06-908e-d4df0dc313b7",
+      apiHost: "https://caitlynwee-flowise.hf.space",
+      theme: {
+        chatWindow: {
+          title: "Rezzy AI",
+          welcomeMessage: "Hello! I'm here to help you prep for interviews.",
+          fontSize: 16,
+          showAgentMessages: true
+        },
+        button: {
+          display: true,
+          tooltip: true
+        }
+      }
+    })
+  </script>
+</body>
+</html>
