@@ -20,6 +20,18 @@
         chatflowid: "90c336db-4243-464d-9928-180aff6836d0",
         apiHost: "https://cloud.flowiseai.com",
     })
+    // Remove tooltip forcibly after chatbot loads
+    function removeFlowiseTooltip() {
+      const tooltip = document.querySelector('.flowise-tooltip, .flowise__tooltip');
+      if (tooltip) {
+        tooltip.style.display = 'none';
+        tooltip.style.opacity = '0';
+        tooltip.style.visibility = 'hidden';
+      } else {
+        setTimeout(removeFlowiseTooltip, 300);
+      }
+    }
+    removeFlowiseTooltip();
     </script>
 </body>
 </html>
