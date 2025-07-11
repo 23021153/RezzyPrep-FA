@@ -7,7 +7,6 @@
     <title>RezzyPrep - CV Analyzer</title>
     <link rel="stylesheet" href="css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-
     <style>
         .chatflow-container {
             max-width: 800px;
@@ -46,12 +45,11 @@
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="cv-analyzer.html" class="active">CV Analyzer</a></li>
-                <li><a href="mock-interview.html" class="active">AI Powered Interview Prep</a></li>
+                <li><a href="mock-interview.html">AI Powered Interview Prep</a></li>
                 <li><a href="#">Contact</a></li>
             </ul>
         </nav>
     </header>
-
     <main>
         <div class="chatflow-container">
             <div class="chatflow-title">CV Analyzer & Smart CV Analysis</div>
@@ -61,9 +59,7 @@
             <div id="flowise-chatbot"></div>
         </div>
     </main>
-
-
-    <script src="js/app.js"></script> 
+    <script src="js/app.js"></script>
     <script type="module">
         import Chatbot from "https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js"
         Chatbot.init({
@@ -124,8 +120,7 @@
                     }
                 },
                 button: {
-                    display: 'none', // Hide any floating button or tooltip
-                    tooltip : "false" // Disable tooltip
+                    display: 'none' // Hide any floating button or tooltip
                 }
             }
         })
