@@ -6,7 +6,6 @@
     <meta name="description" content="RezzyPrep - CV Analyzer & Smart CV Analysis">
     <title>RezzyPrep - Mock Interview</title>
     <script src="https://cdn.botpress.cloud/webchat/v3.0/inject.js"></script>
-    
     <link rel="stylesheet" href="css/styles.css">
     <style>
     body {
@@ -25,8 +24,30 @@
       align-items: center;
     }
 
-    </style>
+    #webchat {
+      width: 400px;
+      height: 600px;
+      margin: 4rem auto 2rem auto;
+      position: relative;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+      border-radius: 12px;
+      background: #fff;
+    }
 
+    .bpFab {
+      display: none;
+    }
+
+    .bpWebchat {
+      position: absolute !important;
+      top: 0 !important;
+      left: 0 !important;
+      right: 0 !important;
+      bottom: 0 !important;
+      width: 100% !important;
+      height: 100% !important;
+    }
+    </style>
 </head>
 <body>
   <header class="header">
@@ -40,11 +61,12 @@
       </ul>
     </nav>
   </header>
-
-  <div id="webchat" style="width: 200px; height: 200px;"></div>
-  
-
-
+  <main>
+    <div id="webchat"></div>
+  </main>
+  <footer class="footer">
+    <p>&copy; 2025 RezzyPrep. All rights reserved.</p>
+  </footer>
   <script>
     window.botpress.on("webchat:ready", () => {
       window.botpress.open();
@@ -56,7 +78,5 @@
       selector: "#webchat"
     });
   </script>
-  
-
 </body>
 </html>
