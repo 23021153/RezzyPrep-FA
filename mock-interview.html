@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="RezzyPrep - CV Analyzer & Smart CV Analysis">
-    <title>RezzyPrep - Mock Interview</title>
-    <script src="https://cdn.botpress.cloud/webchat/v3.0/inject.js"></script>
-    <link rel="stylesheet" href="css/styles.css">
-    <style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="RezzyPrep - CV Analyzer & Smart CV Analysis" />
+  <title>RezzyPrep - Mock Interview</title>
+
+  <!-- Botpress Webchat Script -->
+  <script src="https://cdn.botpress.cloud/webchat/v3.0/inject.js"></script>
+
+  <!-- Your styles -->
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
     body {
       margin: 0;
     }
@@ -24,8 +28,30 @@
       align-items: center;
     }
 
-    </style>
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
 
+    .nav-links li a {
+      color: white;
+      text-decoration: none;
+    }
+
+    /* Hide the chat bubble */
+    #webchat .bpw-floating-button {
+      display: none !important;
+    }
+
+    /* Optional: Make chat bigger and centered */
+    #webchat {
+      width: 100%;
+      height: 600px;
+      max-width: 800px;
+      margin: 40px auto;
+    }
+  </style>
 </head>
 <body>
   <header class="header">
@@ -40,22 +66,20 @@
     </nav>
   </header>
 
-  <div id="webchat" style="width: 200px; height: 200px;"></div>
-  
-
+  <div id="webchat"></div>
 
   <script>
-    window.botpress.on("webchat:ready", () => {
-      window.botpress.open();
-    });
-
-    window.botpress.init({
+    window.botpressWebChat.init({
       botId: "502c3310-636b-490a-8b95-d03604378669",
       clientId: "1eced4cf-0a70-4d09-b510-60519266b6c4",
-      selector: "#webchat"
+      selector: "#webchat",
+      disableAnimations: false,
+      enableReset: true
+    });
+
+    window.botpressWebChat.on("webchat:ready", () => {
+      window.botpressWebChat.open();
     });
   </script>
-  
-
 </body>
 </html>
