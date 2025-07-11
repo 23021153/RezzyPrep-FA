@@ -64,19 +64,13 @@
 
 
     <script src="js/app.js"></script> 
-
-    <!-- Remove container, display only the chatbot full screen -->
     <script type="module">
         import Chatbot from "https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js"
         Chatbot.init({
             chatflowid: "4754ee89-c88e-4b06-908e-d4df0dc313b7",
             apiHost: "https://caitlynwee-flowise.hf.space",
-            chatflowConfig: {
-                /* Chatflow Config */
-            },
-            observersConfig: {
-                /* Observers Config */
-            },
+            chatflowConfig: {},
+            observersConfig: {},
             theme: {
                 chatWindow: {
                     height: Math.round(window.innerHeight * 0.7),
@@ -130,7 +124,7 @@
                     }
                 },
                 button: {
-                    display: 'none'
+                    display: 'none' // Hide any floating button or tooltip
                 }
             }
         })
