@@ -7,69 +7,70 @@
     <title>RezzyPrep - CV Analyzer</title>
     <link rel="stylesheet" href="css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-
     <style>
-    body {
-      margin: 0;
-    }
+  html, body {
+    margin: 0;
+    padding: 0;
+    height: auto;
+    font-family: 'Poppins', sans-serif;
+  }
 
-    .header {
-      background-color: #a53a13;
-      padding: 20px;
-      color: white;
-    }
+  .header {
+    background-color: #a53a13;
+    padding: 20px;
+    color: white;
+  }
 
-    .nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
-    main {
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
-      min-height: 80vh;
-    }
+  main {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px 0;
+    min-height: 70vh;
+  }
 
+  #flowise-chat {
+    width: 90vw;
+    max-width: 1100px;
+    height: 400px; /* Or adjust to desired height */
+    min-height: 300px;
+    margin: 0 auto;
+    position: relative;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  flowise-fullchatbot {
+    width: 100% !important;
+    height: 100% !important;
+    position: relative !important;
+  }
+
+  .footer {
+    background-color: #f1f1f1;
+    padding: 20px;
+    text-align: center;
+  }
+
+  @media (max-width: 900px) {
     #flowise-chat {
-      width: 75vw;
-      height: 40vh;
-      min-width: 600px;
-      min-height: 300px;
-      max-width: 1100px;
-      max-height: 100px;
-      margin: 40px auto 60px auto;
-      position: relative;
-      box-shadow: 0 4px 24px rgba(0,0,0,0.08);
-      border-radius: 12px;
-      background: #fff;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+      width: 95vw;
+      height: 350px;
+      min-height: 250px;
     }
+  }
+  </style>
 
-    flowise-fullchatbot {
-      position: absolute !important;
-      top: 0 !important;
-      left: 0 !important;
-      right: 0 !important;
-      bottom: 0 !important;
-      width: 100% !important;
-      height: 80% !important;
-    }
-
-    @media (max-width: 900px) {
-      #flowise-chat {
-        width: 90vw;
-        height: 55vh;
-        min-width: 280px;
-        min-height: 250px;
-        margin: 30px auto 40px auto;
-      }
-    }
-    </style>
 </head>
 <body>
     <header class="header">
