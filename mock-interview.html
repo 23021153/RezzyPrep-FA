@@ -10,11 +10,20 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
     <style>
-    body {
+    html, body {
+      height: 100%;
       margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
       min-height: 100vh;
+      height: 100vh;
       display: flex;
       flex-direction: column;
+      padding: 0;
+      margin: 0;
     }
 
     .header {
@@ -30,18 +39,36 @@
     }
 
     main {
-      flex: 1;
+      flex: 1 1 0;
       display: flex;
       flex-direction: column;
+      justify-content: stretch;
+      align-items: stretch;
       min-height: 0;
-      position: relative;
-      padding-top: 80px; /* space below navbar */
+      padding: 0;
+      margin: 0;
     }
 
     #webchat {
-      flex: 1;
+      flex: 1 1 0;
       width: 100%;
+      height: 100%;
+      min-width: 0;
+      min-height: 0;
+      margin: 0;
+      padding: 0;
+      position: relative;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+      border-top-left-radius: 12px;
+      border-top-right-radius: 12px;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
       background: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: stretch;
+      align-items: stretch;
+      overflow: hidden;
     }
 
     .bpFab {
@@ -56,20 +83,24 @@
       bottom: 0 !important;
       width: 100% !important;
       height: 100% !important;
-    }
-
-    .footer {
-      background-color: #f5f5f5;
-      padding: 20px;
-      text-align: center;
-      width: 100%;
-      box-sizing: border-box;
+      min-height: 0 !important;
     }
 
     @media (max-width: 900px) {
-      body {
-        min-height: 100vh;
+      #webchat {
+        border-radius: 0 0 0 0;
+        box-shadow: none;
       }
+    }
+
+    .footer {
+      margin: 0;
+      padding: 0.5rem 0 0.5rem 0;
+      width: 100%;
+      background: #a53a13;
+      color: #fff;
+      text-align: center;
+      flex-shrink: 0;
     }
     </style>
 </head>
