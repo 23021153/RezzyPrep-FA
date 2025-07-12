@@ -9,7 +9,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
     <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
     body {
+      min-height: 100vh;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      padding: 0;
       margin: 0;
     }
 
@@ -26,28 +38,36 @@
     }
 
     main {
+      flex: 1 1 0;
       display: flex;
-      justify-content: center;
-      align-items: flex-start;
-      min-height: 80vh;
+      flex-direction: column;
+      justify-content: stretch;
+      align-items: stretch;
+      min-height: 0;
+      padding: 0;
+      margin: 0;
     }
 
     #flowise-chat {
-      width: 75vw;
-      height: 40vh;
-      min-width: 600px;
-      min-height: 300px;
-      max-width: 1100px;
-      max-height: 100px;
-      margin: 40px auto 60px auto;
+      flex: 1 1 0;
+      width: 100%;
+      height: 100%;
+      min-width: 0;
+      min-height: 0;
+      margin: 0;
+      padding: 0;
       position: relative;
       box-shadow: 0 4px 24px rgba(0,0,0,0.08);
-      border-radius: 12px;
+      border-top-left-radius: 12px;
+      border-top-right-radius: 12px;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
       background: #fff;
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      align-items: center;
+      justify-content: stretch;
+      align-items: stretch;
+      overflow: hidden;
     }
 
     flowise-fullchatbot {
@@ -57,17 +77,25 @@
       right: 0 !important;
       bottom: 0 !important;
       width: 100% !important;
-      height: 80% !important;
+      height: 100% !important;
+      min-height: 0 !important;
     }
 
     @media (max-width: 900px) {
       #flowise-chat {
-        width: 90vw;
-        height: 55vh;
-        min-width: 280px;
-        min-height: 250px;
-        margin: 30px auto 40px auto;
+        border-radius: 0 0 0 0;
+        box-shadow: none;
       }
+    }
+
+    .footer {
+      margin: 0;
+      padding: 0.5rem 0 0.5rem 0;
+      width: 100%;
+      background: #a53a13;
+      color: #fff;
+      text-align: center;
+      flex-shrink: 0;
     }
     </style>
 </head>
