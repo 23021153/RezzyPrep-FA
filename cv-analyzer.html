@@ -44,6 +44,17 @@
       box-shadow: 0 4px 24px rgba(0,0,0,0.08);
       border-radius: 12px;
       background: #fff;
+      overflow: hidden;
+    }
+
+    flowise-fullchatbot {
+      position: absolute !important;
+      top: 0 !important;
+      left: 0 !important;
+      right: 0 !important;
+      bottom: 0 !important;
+      width: 100% !important;
+      height: 100% !important;
     }
 
     @media (max-width: 900px) {
@@ -71,6 +82,7 @@
     </header>
     <main>
         <div id="flowise-chat">
+            <flowise-fullchatbot></flowise-fullchatbot>
         </div>
     </main>
     <footer class="footer">
@@ -78,7 +90,7 @@
     </footer>
     <script type="module">
     import Chatbot from "https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js"
-    Chatbot.init({
+    Chatbot.initFull({
         chatflowid: "4754ee89-c88e-4b06-908e-d4df0dc313b7",
         apiHost: "https://caitlynwee-flowise.hf.space",
     })
