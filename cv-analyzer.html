@@ -4,14 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CV Analyzer</title>
+    <style>
+        /* Hide any floating button or tooltip */
+        .flowise-tooltip, 
+        [class*="tooltip"],
+        [class*="fab"] {
+            display: none !important;
+            opacity: 0 !important;
+            visibility: hidden !important;
+        }
+    </style>
 </head>
 <body>
     <script type="module">
-    import Chatbot from "https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js"
-    Chatbot.init({
-        chatflowid: "4754ee89-c88e-4b06-908e-d4df0dc313b7",
-        apiHost: "https://caitlynwee-flowise.hf.space",
-    })
+        import Chatbot from "https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js"
+        Chatbot.init({
+            chatflowid: "4754ee89-c88e-4b06-908e-d4df0dc313b7",
+            apiHost: "https://caitlynwee-flowise.hf.space",
+            theme: {
+                button: {
+                    display: false  // Disable floating button
+                },
+                chatWindow: {
+                    showTitle: true,
+                    title: "Rezzy AI CV Analyzer",
+                    welcomeMessage: "Hello! I'm here to help analyze your CV.",
+                    backgroundColor: "#ffffff",
+                    height: 700,
+                    width: 400,
+                    fontSize: 16
+                }
+            }
+        })
+
+        // Force open chat window after a brief delay
+        setTimeout(() => {
+            const chatWindow = document.querySelector('.flowise-chat-window');
+            if (chatWindow) {
+                chatWindow.style.display = 'block';
+            }
+        }, 100);
     </script>
 </body>
 </html>
