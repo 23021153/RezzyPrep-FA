@@ -3,85 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="RezzyPrep - CV Analyzer & Smart CV Analysis">
-    <title>RezzyPrep - CV Analyzer</title>
-    <script src="https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js"></script>
-    <link rel="stylesheet" href="css/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <title>CV Analyzer</title>
     <style>
-        main {
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            min-height: 80vh;
-        }
-        #flowise-container {
-            width: 65vw;
-            height: 70vh;
-            min-width: 400px;
-            min-height: 400px;
-            max-width: 900px;
-            max-height: 900px;
-            margin: 96px auto 0 auto;
-            position: relative;
-            box-shadow: 0 4px 24px rgba(0,0,0,0.08);
-            border-radius: 12px;
-            background: #fff;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-        @media (max-width: 900px) {
-            #flowise-container {
-                width: 95vw;
-                height: 70vh;
-                min-width: 220px;
-                min-height: 220px;
-                margin-top: 48px;
-            }
+        /* Hide tooltip and floating elements */
+        .tooltip,
+        .flowise-tooltip,
+        .fab,
+        .flowise-fab {
+            display: none !important;
+            opacity: 0 !important;
+            visibility: hidden !important;
+            pointer-events: none !important;
         }
     </style>
 </head>
 <body>
-    <header class="header">
-        <nav class="nav">
-            <div class="logo">RezzyPrep</div>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="cv-analyzer.html" class="active">CV Analyzer</a></li>
-                <li><a href="mock-interview.html">AI Powered Interview Prep</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <div id="flowise-container"></div>
-    </main>
-    <footer class="footer">
-        <p>&copy; 2025 RezzyPrep. All rights reserved.</p>
-    </footer>
-    <script>
-        window.addEventListener('DOMContentLoaded', function() {
-            window.Chatbot.init({
-                chatflowid: "4754ee89-c88e-4b06-908e-d4df0dc313b7",
-                apiHost: "https://caitlynwee-flowise.hf.space",
-                theme: {
-                    button: {
-                        display: false
-                    },
-                    chatWindow: {
-                        showTitle: true,
-                        title: "RezzyPrep CV Analyzer",
-                        welcomeMessage: "Hello! Upload your CV and I'll analyze it for you.",
-                        backgroundColor: '#ffffff',
-                        height: '100%',
-                        width: '100%'
-                    }
-                },
-                containerSelector: '#flowise-container'
-            });
-        });
+    <script type="module">
+        import Chatbot from "https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js"
+        Chatbot.init({
+            chatflowid: "4754ee89-c88e-4b06-908e-d4df0dc313b7",
+            apiHost: "https://caitlynwee-flowise.hf.space",
+        })
     </script>
 </body>
 </html>
