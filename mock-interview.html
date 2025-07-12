@@ -12,6 +12,11 @@
     <style>
     body {
       margin: 0;
+      min-height: 100vh;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      padding: 0;
     }
 
     .header {
@@ -27,28 +32,25 @@
     }
 
     main {
+      flex: 1;
       display: flex;
-      justify-content: center;
-      align-items: flex-start;
-      min-height: 80vh;
+      flex-direction: column;
+      position: relative;
+      padding: 0;
+      margin: 0;
+      overflow: hidden;
     }
 
     #webchat {
-      width: 65vw;
-      height: 70vh;
-      min-width: 400px;
-      min-height: 400px;
-      max-width: 900px;
-      max-height: 900px;
-      margin: 96px auto 0 auto;
+      flex: 1;
+      width: 100%;
       position: relative;
-      box-shadow: 0 4px 24px rgba(0,0,0,0.08);
-      border-radius: 12px;
-      background: #fff;
+      margin: 0;
+      padding: 0;
       display: flex;
+      background: #fff;
       flex-direction: column;
-      justify-content: center;
-      align-items: center;
+      overflow: hidden;
     }
 
     .bpFab {
@@ -65,14 +67,18 @@
       height: 100% !important;
     }
 
-    @media (max-width: 900px) {
-      #webchat {
-        width: 95vw;
-        height: 70vh;
-        min-width: 220px;
-        min-height: 220px;
-        margin-top: 48px;
-      }
+    .footer {
+      margin: 0;
+      width: 100%;
+      background: #a53a13;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .footer p {
+      margin: 0;
     }
     </style>
 </head>
