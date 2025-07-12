@@ -39,17 +39,18 @@
     }
 
     main {
-      flex: 1 1 auto;
+      flex: 1;
       display: flex;
       flex-direction: column;
       position: relative;
       min-height: 0;
       padding: 0;
       margin: 0;
+      overflow: hidden;
     }
 
     #webchat {
-      flex: 1 1 auto;
+      flex: 1;
       width: 100%;
       position: relative;
       margin: 0;
@@ -58,11 +59,7 @@
       background: #fff;
       box-shadow: none;
       border-radius: 0;
-      background: #fff;
-      display: flex;
       flex-direction: column;
-      justify-content: stretch;
-      align-items: stretch;
       overflow: hidden;
     }
 
@@ -78,10 +75,13 @@
       bottom: 0 !important;
       width: 100% !important;
       height: 100% !important;
+      display: flex;
+      flex-direction: column;
     }
 
     .footer {
       margin: 0;
+      border-top: 1px solid rgba(255,255,255,0.1);
       width: 100%;
       background: #a53a13;
       color: #fff;
