@@ -4,34 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CV Analyzer</title>
-    <style>
-      /* Hide Flowise tooltip if present */
-      .flowise-tooltip, .flowise__tooltip {
-        display: none !important;
-        opacity: 0 !important;
-        visibility: hidden !important;
-      }
-    </style>
 </head>
 <body>
     <script type="module">
     import Chatbot from "https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js"
     Chatbot.init({
-        chatflowid: "90c336db-4243-464d-9928-180aff6836d0",
-        apiHost: "https://cloud.flowiseai.com",
+        chatflowid: "4754ee89-c88e-4b06-908e-d4df0dc313b7",
+        apiHost: "https://caitlynwee-flowise.hf.space",
     })
-    // Remove tooltip forcibly after chatbot loads
-    function removeFlowiseTooltip() {
-      const tooltip = document.querySelector('.flowise-tooltip, .flowise__tooltip');
-      if (tooltip) {
-        tooltip.style.display = 'none';
-        tooltip.style.opacity = '0';
-        tooltip.style.visibility = 'hidden';
-      } else {
-        setTimeout(removeFlowiseTooltip, 300);
-      }
-    }
-    removeFlowiseTooltip();
     </script>
 </body>
 </html>
