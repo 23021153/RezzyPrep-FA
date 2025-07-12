@@ -7,6 +7,55 @@
     <title>RezzyPrep - CV Analyzer</title>
     <link rel="stylesheet" href="css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+    <style>
+    body {
+      margin: 0;
+    }
+
+    .header {
+      background-color: #a53a13;
+      padding: 20px;
+      color: white;
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    main {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 80vh;
+    }
+
+    #flowise-chat {
+      width: 65vw;
+      height: 70vh;
+      min-width: 400px;
+      min-height: 400px;
+      max-width: 900px;
+      max-height: 900px;
+      margin: 96px auto 0 auto;
+      position: relative;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+      border-radius: 12px;
+      background: #fff;
+    }
+
+    @media (max-width: 900px) {
+      #flowise-chat {
+        width: 95vw;
+        height: 70vh;
+        min-width: 220px;
+        min-height: 220px;
+        margin-top: 48px;
+      }
+    }
+    </style>
 </head>
 <body>
     <header class="header">
@@ -29,9 +78,16 @@
     </footer>
     <script type="module">
     import Chatbot from "https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js"
-    Chatbot.init({
+    Chatbot.initFull({
         chatflowid: "4754ee89-c88e-4b06-908e-d4df0dc313b7",
         apiHost: "https://caitlynwee-flowise.hf.space",
+        container: "#flowise-chat",
+        theme: {
+            chatWindow: {
+                height: '100%',
+                width: '100%'
+            }
+        }
     })
     </script>
 </body>
