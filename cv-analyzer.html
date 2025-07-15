@@ -37,6 +37,22 @@
       align-items: center;
     }
 
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-links li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .nav-links li a.active {
+      text-decoration: underline;
+    }
+
     main {
       flex: 1 1 0;
       display: flex;
@@ -46,7 +62,22 @@
       min-height: 0;
       padding: 0;
       margin: 0;
-      
+    }
+
+    #refresh-container {
+      text-align: right;
+      padding: 10px 20px;
+    }
+
+    #refresh-chatbot {
+      background-color: #a53a13;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-family: 'Poppins', sans-serif;
+      font-size: 14px;
     }
 
     #flowise-chat {
@@ -108,24 +139,44 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="cv-analyzer.html" class="active">CV Analyzer</a></li>
                 <li><a href="mock-interview.html">AI Powered Interview Prep</a></li>
-                <li><a href="#">Contact</a></li>
             </ul>
         </nav>
     </header>
+
     <main>
+        <div id="refresh-container">
+            <button id="refresh-chatbot">🔄 Refresh Chatbot</button>
+        </div>
+
         <div id="flowise-chat">
             <flowise-fullchatbot></flowise-fullchatbot>
         </div>
     </main>
+
     <footer class="footer">
         <p>&copy; 2025 RezzyPrep. All rights reserved.</p>
     </footer>
+
     <script type="module">
     import Chatbot from "https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js"
+
+    // Initialize chatbot on page load
     Chatbot.initFull({
         chatflowid: "4754ee89-c88e-4b06-908e-d4df0dc313b7",
         apiHost: "https://caitlynwee-flowise.hf.space",
-    })
+    });
+
+    // Refresh chatbot logic
+    document.getElementById('refresh-chatbot').addEventListener('click', () => {
+        const chatContainer = document.getElementById('flowise-chat');
+        chatContainer.innerHTML = '<flowise-fullchatbot></flowise-fullchatbot>';
+        setTimeout(() => {
+            Chatbot.initFull({
+                chatflowid: "4754ee89-c88e-4b06-908e-d4df0dc313b7",
+                apiHost: "https://caitlynwee-flowise.hf.space",
+            });
+        }, 100);
+    });
     </script>
 </body>
 </html>
