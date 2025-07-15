@@ -105,13 +105,14 @@
     <p>&copy; 2025 RezzyPrep. All rights reserved.</p>
   </footer>
   <script>
-    window.addEventListener("DOMContentLoaded", function () {
-      window.botpressWebChat.init({
-        botId: "3f3a8989-58c3-40d6-9dc4-5a91edf90b5c",
-        clientId: "6dde50ec-b4cb-443f-b96d-ff2705b358ac",
-        messagingUrl: "https://messaging.botpress.cloud",
-        selector: "#webchat"
-      });
+    window.botpress.on("webchat:ready", () => {
+      window.botpress.open();
+    });
+
+    window.botpress.init({
+      botId: "3f3a8989-58c3-40d6-9dc4-5a91edf90b5c",
+      clientId: "6dde50ec-b4cb-443f-b96d-ff2705b358ac",
+      selector: "#webchat"
     });
   </script>
 </body>
