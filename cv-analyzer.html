@@ -29,6 +29,8 @@
       background-color: #a53a13;
       padding: 20px;
       color: white;
+      position: relative;
+      z-index: 2;
     }
 
     .nav {
@@ -38,35 +40,25 @@
     }
 
     main {
-      flex: 1 1 0;
+      flex: 1;
       display: flex;
       flex-direction: column;
-      justify-content: stretch;
-      align-items: stretch;
-      min-height: 0;
+      position: relative;
       padding: 0;
       margin: 0;
+      overflow: hidden;
     }
 
     #flowise-chat {
-      flex: 1 1 0;
+      flex: 1;
       width: 100%;
-      height: 100%;
-      min-width: 0;
-      min-height: 0;
+      position: relative;
       margin: 0;
       padding: 0;
-      position: relative;
-      box-shadow: 0 4px 24px rgba(0,0,0,0.08);
-      border-top-left-radius: 12px;
-      border-top-right-radius: 12px;
-      border-bottom-left-radius: 0;
-      border-bottom-right-radius: 0;
-      background: #fff;
       display: flex;
+      background: #fff;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.08);
       flex-direction: column;
-      justify-content: stretch;
-      align-items: stretch;
       overflow: hidden;
     }
 
@@ -79,6 +71,7 @@
       width: 100% !important;
       height: 100% !important;
       min-height: 0 !important;
+      z-index: 1;
     }
 
     @media (max-width: 900px) {
@@ -96,6 +89,8 @@
       color: #fff;
       text-align: center;
       flex-shrink: 0;
+      position: relative;
+      z-index: 2;
     }
     </style>
 </head>
