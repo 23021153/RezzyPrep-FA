@@ -1,119 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="RezzyPrep - CV Analyzer & Smart CV Analysis">
-    <title>RezzyPrep - Mock Interview</title>
-    <script src="https://cdn.botpress.cloud/webchat/v3.0/inject.js"></script>
-    <link rel="stylesheet" href="css/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Botpress Webchat Integration</title>
 
-    <style>
-    body {
-      margin: 0;
-      min-height: 100vh;
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      padding: 0;
-    }
+  <!-- Inject Botpress Webchat Script -->
+  <script src="https://cdn.botpress.cloud/webchat/v3.0/inject.js"></script>
 
-    .header {
-      background-color: #a53a13;
-      padding: 20px;
-      color: white;
-      position: relative;
-      z-index: 2;
-    }
-
-    .nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    main {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      position: relative;
-      padding: 0;
-      margin: 0;
-      overflow: hidden;
-    }
-
-    #webchat {
-      flex: 1;
+  <!-- Optional Custom Styling -->
+  <style>
+    #webchat .bpWebchat {
+      position: unset;
       width: 100%;
-      position: relative;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      background: #fff;
-      flex-direction: column;
-      overflow: hidden;
+      height: 100%;
+      max-height: 100%;
+      max-width: 100%;
     }
 
-    .bpFab {
+    #webchat .bpFab {
       display: none;
     }
-
-    .bpWebchat {
-      position: absolute !important;
-      top: 0 !important;
-      left: 0 !important;
-      right: 0 !important;
-      bottom: 0 !important;
-      width: 100% !important;
-      height: 100% !important;
-      z-index: 1;
-    }
-
-    .footer {
-      margin: 0;
-      width: 100%;
-      background: #a53a13;
-      color: #fff;
-      text-align: center;
-      padding: 1rem;
-      border-top: 1px solid rgba(255,255,255,0.1);
-      position: relative;
-      z-index: 2;
-    }
-
-    .footer p {
-      margin: 0;
-    }
-    </style>
+  </style>
 </head>
 <body>
-  <header class="header">
-    <nav class="nav">
-      <div class="logo">RezzyPrep</div>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="cv-analyzer.html" class="active">CV Analyzer</a></li>
-        <li><a href="mock-interview.html">AI Powered Interview Prep</a></li>
-      </ul>
-    </nav>
-  </header>
-  <main>
-    <div id="webchat"></div>
-  </main>
-  <footer class="footer">
-    <p>&copy; 2025 RezzyPrep. All rights reserved.</p>
-  </footer>
+
+  <!-- Bot container -->
+  <div id="webchat" style="width: 500px; height: 500px;"></div>
+
+  <!-- Botpress Config Script -->
   <script>
     window.botpress.on("webchat:ready", () => {
       window.botpress.open();
     });
 
     window.botpress.init({
-      botId: "3f3a8989-58c3-40d6-9dc4-5a91edf90b5c",
-      clientId: "6dde50ec-b4cb-443f-b96d-ff2705b358ac",
-      selector: "#webchat"
+      "botId": "3f3a8989-58c340d6-9dc4-5a91edf90b5c",
+      "configuration": {
+        "version": "v1",
+        "color": "#3276EA",
+        "variant": "solid",
+        "headerVariant": "glass",
+        "themeMode": "light",
+        "fontFamily": "inter",
+        "radius": 4,
+        "feedbackEnabled": false,
+        "footer": "[⚡ by Botpress](https://botpress.com/?from=webchat)"
+      },
+      "clientId": "6dde50ec-b4cb-443f-b96d-ff2705b358ac",
+      "selector": "#webchat"
     });
   </script>
+
+  <!-- Optional: This loads your custom config or skills -->
+  <!-- <script src="https://files.bpcontent.cloud/2025/07/10/17/20250710171152-JRRPWZMI.js"></script> -->
+
 </body>
 </html>
